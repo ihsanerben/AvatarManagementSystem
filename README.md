@@ -73,26 +73,30 @@ Senaryo 1: Kullanıcı Kayıt Oluyor
 POST /api/auth/register endpoint’ine username ve password ile istek atılır.
 Kullanıcı verisi PostgreSQL’e ve Redis’e kaydedilir.
 Başarılı kayıt işlemi sonucunda JSON formatında kullanıcı bilgileri döndürülür.
+
 Senaryo 2: Kullanıcı Login Oluyor
 POST /api/auth/login endpoint’ine kullanıcı adı ve şifre gönderilir.
 Redis içinde kullanıcı varsa doğrudan giriş yapılır.
 Eğer Redis’te yoksa, PostgreSQL’den çekilir ve Redis’e eklenir.
+
 Senaryo 3: Kullanıcı Avatar Yüklüyor
 POST /api/files/uploadFile endpoint’ine Multipart File gönderilir.
 Dosya PostgreSQL’e kaydedilir ve Redis Cache’e eklenir.
+
 Senaryo 4: Kullanıcı Avatarını Çekiyor
-GET /api/files/getFile/{id} ile dosya ID'si ile veri istenir.
+GET /api/files/getFile endpoint’i çağrılır.
 Önce Redis kontrol edilir. Eğer cache’de varsa, doğrudan cache’den döndürülür.
 Cache’de yoksa, veritabanından çekilip tekrar Redis’e eklenir.
+
 Senaryo 5: Kullanıcı Avatarını Güncelliyor
 PUT /api/files/updateFile endpoint’ine yeni dosya yüklenir.
 Dosya hem PostgreSQL’de güncellenir hem de Redis içinde güncellenir.
+
 Senaryo 6: Kullanıcı Avatarını Silme
-DELETE /api/files/deleteFile/{id} ile dosya ID’si verilir.
-PostgreSQL’den silinir ve aynı zamanda Redis’ten de temizlenir.
+DELETE /api/files/deleteFile endpoint’i çağrılır.
+Dosya PostgreSQL’den silinir ve aynı zamanda Redis’ten de temizlenir.
 
 6. Sonuç ve Kazanımlar:
-
 Bu proje, performans, güvenlik ve ölçeklenebilirlik açısından optimize edilmiş bir sistem sunmaktadır. Spring Boot, Redis ve PostgreSQL’in etkin kullanımıyla, aşağıdaki kazanımlar elde edilmiştir:
 
 ✅ Daha hızlı kimlik doğrulama (Redis Cache sayesinde)
@@ -101,3 +105,5 @@ Bu proje, performans, güvenlik ve ölçeklenebilirlik açısından optimize edi
 ✅ Modüler ve ölçeklenebilir bir mimari (Repository-Service-Controller katmanlı yapı)
 
 Bu proje, Spring Boot ile modern bir backend geliştirme sürecini öğrenmek ve uygulamak için mükemmel bir deneyim sağlamıştır. 
+
+
