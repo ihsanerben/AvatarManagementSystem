@@ -1,6 +1,6 @@
 Avatar Management System - Proje Açıklaması
 
-1. Proje Tanımı ve Amacı:
+        1. Proje Tanımı ve Amacı:
 Avatar Management System, kullanıcıların avatarlarını yönetebileceği bir Spring Boot tabanlı web uygulamasıdır. Bu sistemde kullanıcılar
 
 Kayıt (Register) olabilir,
@@ -10,7 +10,7 @@ Verilerini güvenli bir şekilde saklayabilir ve hızlı bir erişim sağlayabil
 Bu projede performans optimizasyonu ve güvenlik en üst düzeyde tutulmuş, özellikle Redis Cache mekanizması ile veritabanı erişim maliyetleri minimize edilmiştir.
 
 
-    2. Kullanılan Teknolojiler ve Araçlar:
+      2. Kullanılan Teknolojiler ve Araçlar:
 
 Bu projede modern backend geliştirme prensipleri takip edilerek, performanslı ve ölçeklenebilir bir sistem oluşturulmuştur. Kullanılan başlıca teknolojiler ve araçlar şunlardır:
 
@@ -29,7 +29,7 @@ JUnit & Spring Boot Test: Birim testler ve sistem testleri için kullanıldı.
 Log4J & LoggerService: Kullanıcı işlemlerini detaylı bir şekilde loglamak için kullanıldı.
 
 
-3. Uygulamanın Mimarisi ve Çalışma Prensibi:
+        3. Uygulamanın Mimarisi ve Çalışma Prensibi:
 
 3.1 Kullanıcı İş Akışı:
 Kullanıcı Kayıt Olur → Kullanıcı, username ve password bilgileri ile sisteme kayıt olur. Bu işlem hem PostgreSQL veritabanına hem de Redis Cache'e yazılır.
@@ -56,7 +56,7 @@ Kullanıcı bir avatar sildiğinde, Redis’ten de temizlenir.
 Avantajı: Kullanıcı avatarları daha hızlı erişilir, gereksiz veritabanı sorguları engellenir.
 
 
-4. Optimizasyonlar:
+        4. Optimizasyonlar:
 
 Bu sistemin hızlı, güvenli ve ölçeklenebilir olması için aşağıdaki optimizasyonlar yapıldı:
 
@@ -73,7 +73,7 @@ Bu sistemin hızlı, güvenli ve ölçeklenebilir olması için aşağıdaki opt
 ✔ Global Exception Handling: Bütün hata senaryoları merkezi bir Global Exception Handler üzerinden yönetildi.
 ✔ Rol Tabanlı Yetkilendirme (Role-Based Authorization): Kullanıcıların belirli işlemleri yapabilmesi için rol kontrolleri getirildi.
 
-5. Kullanıcı Senaryoları:
+        5. Kullanıcı Senaryoları:
 Aşağıda temel kullanıcı senaryoları açıklanmıştır:
 
 Senaryo 1: Kullanıcı Kayıt Oluyor
@@ -103,7 +103,7 @@ Senaryo 6: Kullanıcı Avatarını Silme
 DELETE /api/files/deleteFile endpoint’i çağrılır.
 Dosya PostgreSQL’den silinir ve aynı zamanda Redis’ten de temizlenir.
 
-6. Sonuç ve Kazanımlar:
+        6. Sonuç ve Kazanımlar:
 Bu proje, performans, güvenlik ve ölçeklenebilirlik açısından optimize edilmiş bir sistem sunmaktadır. Spring Boot, Redis ve PostgreSQL’in etkin kullanımıyla, aşağıdaki kazanımlar elde edilmiştir:
 
 ✅ Daha hızlı kimlik doğrulama (Redis Cache sayesinde)
