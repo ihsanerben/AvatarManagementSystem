@@ -9,6 +9,7 @@ Avatarlarını yükleyebilir, güncelleyebilir ve silebilir,
 Verilerini güvenli bir şekilde saklayabilir ve hızlı bir erişim sağlayabilir.
 Bu projede performans optimizasyonu ve güvenlik en üst düzeyde tutulmuş, özellikle Redis Cache mekanizması ile veritabanı erişim maliyetleri minimize edilmiştir.
 
+
 2. Kullanılan Teknolojiler ve Araçlar:
 Bu projede modern backend geliştirme prensipleri takip edilerek, performanslı ve ölçeklenebilir bir sistem oluşturulmuştur. Kullanılan başlıca teknolojiler ve araçlar şunlardır:
 
@@ -25,6 +26,7 @@ Postman: API endpointlerini test etmek için kullanıldı.
 Docker: Redis’in container içinde çalıştırılması için kullanıldı.
 JUnit & Spring Boot Test: Birim testler ve sistem testleri için kullanıldı.
 Log4J & LoggerService: Kullanıcı işlemlerini detaylı bir şekilde loglamak için kullanıldı.
+
 
 3. Uygulamanın Mimarisi ve Çalışma Prensibi:
 
@@ -52,15 +54,19 @@ Kullanıcı bir avatar getirmek istediğinde, öncelikle Redis kontrol edilir.
 Kullanıcı bir avatar sildiğinde, Redis’ten de temizlenir.
 Avantajı: Kullanıcı avatarları daha hızlı erişilir, gereksiz veritabanı sorguları engellenir.
 
+
 4. Optimizasyonlar:
+
 Bu sistemin hızlı, güvenli ve ölçeklenebilir olması için aşağıdaki optimizasyonlar yapıldı:
 
 4.1 Performans İyileştirmeleri:
+
 ✔ Redis Cache Kullanımı: Veritabanına gereksiz sorgular gitmeden, veriler önce Redis’ten çekiliyor.
 ✔ Lazy Loading ve Eager Loading Kullanımı: Hibernate ORM’in @OneToMany(fetch = FetchType.LAZY) gibi optimizasyonları kullanıldı.
 ✔ Asenkron İşlemler: Büyük dosya işlemleri için @Async anotasyonu kullanılarak ana thread’in bloklanması engellendi.
 
 4.2 Güvenlik Önlemleri
+
 ✔ Spring Security (Basic Auth): Yetkilendirme mekanizması sağlandı.
 ✔ AES-CBC + Base64 ile Şifreleme: Kullanıcı şifreleri AES-CBC ile şifrelenerek PostgreSQL'e kaydedildi.
 ✔ Global Exception Handling: Bütün hata senaryoları merkezi bir Global Exception Handler üzerinden yönetildi.
