@@ -10,7 +10,8 @@ Verilerini güvenli bir şekilde saklayabilir ve hızlı bir erişim sağlayabil
 Bu projede performans optimizasyonu ve güvenlik en üst düzeyde tutulmuş, özellikle Redis Cache mekanizması ile veritabanı erişim maliyetleri minimize edilmiştir.
 
 
-2. Kullanılan Teknolojiler ve Araçlar:
+    2. Kullanılan Teknolojiler ve Araçlar:
+
 Bu projede modern backend geliştirme prensipleri takip edilerek, performanslı ve ölçeklenebilir bir sistem oluşturulmuştur. Kullanılan başlıca teknolojiler ve araçlar şunlardır:
 
 Backend:
