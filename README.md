@@ -1,6 +1,7 @@
 Avatar Management System - Proje Açıklaması
 
-        1. Proje Tanımı ve Amacı:
+                1. Proje Tanımı ve Amacı:
+
 Avatar Management System, kullanıcıların avatarlarını yönetebileceği bir Spring Boot tabanlı web uygulamasıdır. Bu sistemde kullanıcılar
 
 Kayıt (Register) olabilir,
@@ -10,26 +11,38 @@ Verilerini güvenli bir şekilde saklayabilir ve hızlı bir erişim sağlayabil
 Bu projede performans optimizasyonu ve güvenlik en üst düzeyde tutulmuş, özellikle Redis Cache mekanizması ile veritabanı erişim maliyetleri minimize edilmiştir.
 
 
-      2. Kullanılan Teknolojiler ve Araçlar:
+              2. Kullanılan Teknolojiler ve Araçlar:
 
 Bu projede modern backend geliştirme prensipleri takip edilerek, performanslı ve ölçeklenebilir bir sistem oluşturulmuştur. Kullanılan başlıca teknolojiler ve araçlar şunlardır:
 
 Backend:
+
 Spring Boot: Framework olarak kullanıldı, bağımlılık yönetimi Maven ile yapıldı.
+
 Spring Data JPA: Veritabanı işlemlerini yönetmek için kullanıldı.
+
 Spring Security (Basic Auth): Kullanıcı kimlik doğrulaması için kullanıldı.
+
 Redis (Spring Data Redis): Kullanıcı ve dosya verilerinin cache’lenmesi için kullanıldı.
+
 PostgreSQL: Ana veritabanı olarak kullanıldı.
+
 Hibernate ORM: JPA ile birlikte veritabanı işlemleri için kullanıldı.
-Geliştirme ve Test Araçları
+
+        Geliştirme ve Test Araçları
+
 DBeaver: PostgreSQL veritabanını yönetmek için kullanıldı.
+
 Postman: API endpointlerini test etmek için kullanıldı.
+
 Docker: Redis’in container içinde çalıştırılması için kullanıldı.
+
 JUnit & Spring Boot Test: Birim testler ve sistem testleri için kullanıldı.
+
 Log4J & LoggerService: Kullanıcı işlemlerini detaylı bir şekilde loglamak için kullanıldı.
 
 
-        3. Uygulamanın Mimarisi ve Çalışma Prensibi:
+                3. Uygulamanın Mimarisi ve Çalışma Prensibi:
 
 3.1 Kullanıcı İş Akışı:
 Kullanıcı Kayıt Olur → Kullanıcı, username ve password bilgileri ile sisteme kayıt olur. Bu işlem hem PostgreSQL veritabanına hem de Redis Cache'e yazılır.
