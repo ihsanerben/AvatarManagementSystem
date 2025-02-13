@@ -15,7 +15,7 @@ Bu projede performans optimizasyonu ve güvenlik en üst düzeyde tutulmuş, öz
 
 Bu projede modern backend geliştirme prensipleri takip edilerek, performanslı ve ölçeklenebilir bir sistem oluşturulmuştur. Kullanılan başlıca teknolojiler ve araçlar şunlardır:
 
-Backend:
+  Backend:
 
 Spring Boot: Framework olarak kullanıldı, bağımlılık yönetimi Maven ile yapıldı.
 
@@ -44,7 +44,8 @@ Log4J & LoggerService: Kullanıcı işlemlerini detaylı bir şekilde loglamak i
 
                 3. Uygulamanın Mimarisi ve Çalışma Prensibi:
 
-3.1 Kullanıcı İş Akışı:
+    3.1 Kullanıcı İş Akışı:
+    
 Kullanıcı Kayıt Olur → Kullanıcı, username ve password bilgileri ile sisteme kayıt olur. Bu işlem hem PostgreSQL veritabanına hem de Redis Cache'e yazılır.
 Kullanıcı Giriş Yapar → Kullanıcı giriş yaptığında önce Redis Cache'de kontrol edilir. Eğer kullanıcı cache’de varsa doğrudan giriş yapılır, yoksa veritabanından çekilir ve tekrar cache’e yazılır.
 Kullanıcı CRUD İşlemleri Yapar → Kullanıcı dosya yükleyebilir, silebilir ve güncelleyebilir. Her işlemde:
@@ -53,16 +54,19 @@ Eğer veri cache’de varsa doğrudan cache’den çekilir.
 Eğer yoksa, veritabanından çekilir ve cache’e yazılır.
 Sistem Log Tutma Mekanizması → Kullanıcının yaptığı her işlem Log4J tabanlı LoggerService ile loglanır.
 
-3.2 Redis Kullanım Stratejisi:
+    3.2 Redis Kullanım Stratejisi:
+    
 Redis’in projeye eklenmesiyle birlikte veritabanı sorgularının yükü hafifletildi ve daha hızlı bir veri erişim mekanizması sağlandı. Kullanıcı ve dosya verileri Redis Cache’e yazılır ve aşağıdaki prensiplere göre yönetilir:
 
-a) Kullanıcı Cache Mekanizması:
+  a) Kullanıcı Cache Mekanizması:
+  
 Kullanıcı register olduğunda Redis’e eklenir.
 Kullanıcı login olduğunda önce Redis’e bakılır, eğer yoksa veritabanına gidilir ve ardından Redis’e eklenir.
 Kullanıcı logout olduğunda Redis’ten temizlenir.
 Avantajı: Kimlik doğrulama işlemleri hızlanır, veritabanı yükü azalır.
 
-b) Dosya (Avatar) Cache Mekanizması:
+  b) Dosya (Avatar) Cache Mekanizması:
+  
 Kullanıcı bir avatar yüklediğinde, hem veritabanına hem de Redis’e kaydedilir.
 Kullanıcı bir avatar getirmek istediğinde, öncelikle Redis kontrol edilir.
 Kullanıcı bir avatar sildiğinde, Redis’ten de temizlenir.
