@@ -44,6 +44,7 @@ Log4J & LoggerService: Kullanıcı işlemlerini detaylı bir şekilde loglamak i
 
                 3. Uygulamanın Mimarisi ve Çalışma Prensibi:
 
+
     3.1 Kullanıcı İş Akışı:
     
 Kullanıcı Kayıt Olur → Kullanıcı, username ve password bilgileri ile sisteme kayıt olur. Bu işlem hem PostgreSQL veritabanına hem de Redis Cache'e yazılır.
