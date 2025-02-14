@@ -132,4 +132,40 @@ Bu proje, performans, güvenlik ve ölçeklenebilirlik açısından optimize edi
 
 Bu proje, Spring Boot ile modern bir backend geliştirme sürecini öğrenmek ve uygulamak için mükemmel bir deneyim sağlamıştır. 
 
+                7. Final
+📌 Uygulamanın İşleyişi (Detaylı Açıklama)
+🔹 Kullanıcı Register Olma:
 
+Kullanıcı kayıt olduğunda, hem PostgreSQL veritabanına hem de Redis Cache içerisine kaydedilir.
+Kullanıcının kimlik bilgileri (username, password vb.) sık sık kullanılacağı için Redis’e de eklenir.
+Böylece, kullanıcı giriş yapmak istediğinde veritabanına gitmeye gerek kalmadan kimlik doğrulama işlemi Redis üzerinden daha hızlı şekilde tamamlanır.
+🔹 Kimlik Doğrulama (Login İşlemi):
+
+Kullanıcı login olduğunda, önce Redis Cache kontrol edilir. Eğer kullanıcı bilgileri Redis’te varsa direkt olarak kimlik doğrulama yapılır.
+Eğer Redis’te yoksa, PostgreSQL’den çekilir ve doğrulandıktan sonra Redis Cache’e eklenir.
+Bu sayede, aynı kullanıcının tekrar tekrar giriş yapması gerektiğinde veritabanına yük binmez ve kimlik doğrulama işlemi hızlandırılır.
+🔹 Avatar Yükleme (Upload İşlemi):
+
+Kullanıcı bir avatar yüklediğinde, yüklenen dosya önce PostgreSQL veritabanına kaydedilir.
+Aynı zamanda, bu avatarın bilgileri (fileId, fileName, fileType, fileData) Redis Cache içine de yazılır.
+Böylece, kullanıcı avatarını görüntülemek istediğinde Redis’ten hızlı bir şekilde çekilebilir.
+🔹 Avatar Getirme (Fetch İşlemi):
+
+Kullanıcı avatarını görmek istediğinde, sistem önce Redis Cache’i kontrol eder.
+Eğer istenen avatar verisi Redis’te mevcutsa, doğrudan Redis’ten getirilir ve veritabanına sorgu yapmaya gerek kalmaz.
+Eğer Redis’te veri yoksa, PostgreSQL’den çekilir ve Redis’e eklenerek sonraki talepler için cache’de tutulur.
+Bu sayede, kullanıcıların avatarlarına erişimi daha hızlı ve performanslı hale getirilir.
+🔹 Avatar Güncelleme (Update İşlemi):
+
+Kullanıcı avatarını değiştirdiğinde, yeni avatar hem PostgreSQL’de hem de Redis’te güncellenir.
+Eski cache verisi silinir ve yeni avatar bilgileri Redis’e yeniden eklenir.
+Böylece, sonraki isteklerde her zaman güncel avatar bilgisi kullanılmış olur.
+🔹 Avatar Silme (Delete İşlemi):
+
+Kullanıcı avatarını silmek istediğinde, avatar hem PostgreSQL veritabanından hem de Redis Cache’ten kaldırılır.
+Böylece, sistemde eski ve gereksiz verilerin cache’te gereksiz yer kaplaması önlenmiş olur.
+🔹 Loglama & Takip:
+
+Yapılan tüm işlemler, hata yönetimi ve performans analizi için Logger Servisi tarafından detaylı şekilde loglanır.
+Kim hangi işlemi yaptı, ne zaman yaptı, hangi endpoint çağrıldı gibi bilgiler sistem tarafından takip edilir.
+Bu loglar sayesinde hata ayıklama ve sistem optimizasyonu kolaylaşır.                
