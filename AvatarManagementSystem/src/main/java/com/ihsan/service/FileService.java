@@ -39,10 +39,9 @@ public class FileService {
     private static final long MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 
     public FileEntity getFileByUsername(String username, String txnId) {
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] getFileByUsername() başladı - username: " + username);
 
         // Tüm dosyaları al
-        List<FileEntity> fileArr = getAllFiles(txnId);
+        List<FileEntity> fileArr = getAllFiles();
         FileEntity theFileEntity = null;
 
         for (FileEntity currentFileEntity : fileArr) {
@@ -54,19 +53,18 @@ public class FileService {
 
         // Dosya bulunamazsa hata fırlat
         if (theFileEntity == null) {
-            loggerService.error(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] getFileByUsername() -> Bu kullanıcının dosyası yok - username: " + username);
+            loggerService.error(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [ERROR][DB] getFileByUsername() -> Bu kullanıcının dosyası yok - username: " + username);
             throw new FileNotFoundException();
         }
-
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] getFileByUsername() tamamlandı - username: " + username);
         return theFileEntity;
     }
 
     public FileEntity getFile(Long fileId, String txnId) {
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: " + fileId);
         // Önce Redis’ten almayı dene
-        FileEntity cachedFile = cacheService.get("file", fileId, FileEntity.class);
+        FileEntity cachedFile = cacheService.get("file", fileId, FileEntity.class, txnId);
         if (cachedFile != null) {
-            loggerService.info(txnId, "[CACHE] Dosya Redis’ten alındı: " + cachedFile.getFileName());
+            loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [CACHE] Dosya Redis’ten alındı: " + cachedFile.getFileName());
             return cachedFile;
         }
 
@@ -76,15 +74,14 @@ public class FileService {
             throw new FileNotFoundException();
         }
 
-        cacheService.put("file", fileId, optionalFile.get());
+        cacheService.put("file", fileId, optionalFile.get(), txnId);
         loggerService.info(txnId, "[CACHE] Dosya Redis’e eklendi: " + optionalFile.get().getFileName());
 
         return optionalFile.get();
     }
 
 
-    public List<FileEntity> getAllFiles(String txnId) {
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] getAllFiles() çağrıldı.");
+    public List<FileEntity> getAllFiles() {
         return fileRepository.findAll();
     }
 
@@ -99,17 +96,17 @@ public class FileService {
         }
 
         fileRepository.delete(fileEntityOptional.get());
-
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] deleteFile() tamamlandı - fileId: " + fileId);
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [DB] Dosya DB'ten silindi: fileID: " + fileId);
 
 
         // **Redis'ten Sil**
-        cacheService.delete("file", fileId);
-        loggerService.info(txnId, AuthUtil.getCurrentUsername() + "] [CACHE] Dosya Redis'ten silindi: fileID: " + fileId);
-
+        cacheService.delete("file", fileId, txnId);
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [CACHE] Dosya Redis'ten silindi: fileID: " + fileId);
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] deleteFile() tamamlandı - fileId: " + fileId);
     }
 
     public FileEntity uploadFile(MultipartFile file, String username, String txnId) throws IOException {
+        loggerService.info(txnId, "[username: " + username + "] [SERVICE] Dosya DB ve redise eklenecek - fileName: " + file.getOriginalFilename());
         loggerService.info(txnId, "[username: " + username + "] [SERVICE] uploadFile() başladı - fileName: " + file.getOriginalFilename());
 
         String fileName = file.getOriginalFilename();
@@ -122,11 +119,11 @@ public class FileService {
             loggerService.error(txnId, "[username: " + username + "] [ERROR][SERVICE] uploadFile() -* dosya çok büyük *- fileName: " + fileName);
             throw new FileSizeExceededException();
         } else if (fileRepository.existsByFileName(fileName)) {
-            loggerService.error(txnId, AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] uploadFile() -* bu dosya ismi mevcut *- fileName: " + fileName);
+            loggerService.error(txnId, AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] uploadFile() -* bu dosya ismi zaten mevcut *- fileName: " + fileName);
             throw new FileNameAlreadyExistsException();
         }
 
-        loggerService.info(txnId, "[username: " + username + "] [SERVICE] uploadFile() - Dosya geçerli, kaydediliyor - fileName: " + fileName);
+        loggerService.info(txnId, "[username: " + username + "] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: " + fileName);
 
         // Kullanıcıyı bul
         Optional<UserEntity> optionalUser = userRepository.findByUsername(username);
@@ -148,24 +145,25 @@ public class FileService {
 
         // Veritabanına kaydet
         fileRepository.save(fileEntity);
-        loggerService.info(txnId, "[username: " + username + "] [SERVICE] Dosya DB'ye kaydedildi - fileName: " + fileName);
+        loggerService.info(txnId, "[username: " + username + "] [DB] Dosya DB'ye kaydedildi - fileName: " + fileName);
 
         // **CacheService Kullanarak Redis'e Kaydet**
-        cacheService.put("file", fileEntity.getId(), fileEntity);
+        cacheService.put("file", fileEntity.getId(), fileEntity, txnId);
         loggerService.info(txnId, "[username: " + username + "] [CACHE] Dosya Redis'e kaydedildi - fileName: " + fileName);
 
         loggerService.info(txnId, "[username: " + username + "] [SERVICE] uploadFile() tamamlandı - fileName: " + fileName);
         return fileEntity;
     }
 
-
     public FileEntity updateFile(String username, MultipartFile file, String txnId) throws IOException {
+        loggerService.info(txnId, "[username: " + username + "] [SERVICE] Dosya DB ve rediste güncellenecek - fileName: " + file.getOriginalFilename());
         loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] updateFile() başladı - username: " + username);
+
 
         FileEntity currentFileEntity = getFileByUsername(username, txnId);
 
         if (currentFileEntity == null) {
-            loggerService.error(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] updateFile() -* file bulunamadi *- username:  " + username);
+            loggerService.error(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] updateFile() -* file bulunamadi *- fileName: " + file.getOriginalFilename());
             throw new FileNotFoundException();
         } else if (file.getSize() > MAX_FILE_SIZE) {
             loggerService.error(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] updateFile() -* dosya çok büyük *- fileName:  " + file.getOriginalFilename());
@@ -174,6 +172,7 @@ public class FileService {
             loggerService.error(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [ERROR][SERVICE] updateFile() -* file type sıkıntı *- fileName: " + file.getOriginalFilename());
             throw new UnsupportedFileTypeException();
         }
+        loggerService.info(txnId, "[username: " + username + "] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: " + file.getOriginalFilename());
 
         currentFileEntity.setFileName(file.getOriginalFilename());
         currentFileEntity.setFileType(file.getContentType());
@@ -182,15 +181,16 @@ public class FileService {
         // Thumbnail oluştur
         byte[] thumbnailData = ImageUtils.generateThumbnail(currentFileEntity.getFileData());
         currentFileEntity.setThumbnailData(thumbnailData);
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] updateFile() thumbnailData güncellendi - fileName: " + file.getOriginalFilename());
+
 
         fileRepository.save(currentFileEntity);
+        loggerService.info(txnId, "[username: " + username + "] [DB] uploadFile() tamamlandı - fileName: " + file.getOriginalFilename());
 
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] updateFile() tamamlandı - username: " + username);
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [CACHE] file cache'de update edildi - username: " + username);
+        cacheService.put("file", currentFileEntity.getId(), currentFileEntity, txnId);
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [CACHE] file cache'de update edildi - fileName: " + file.getOriginalFilename());
 
-        cacheService.put("file", currentFileEntity.getId(), currentFileEntity);
-        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [CACHE] Dosya Redis'te güncellendi - fileName: " + currentFileEntity.getFileName());
-
+        loggerService.info(txnId, "[username: " + AuthUtil.getCurrentUsername() + "] [SERVICE] updateFile() tamamlandı - fileName: " + file.getOriginalFilename());
         return currentFileEntity;
     }
 

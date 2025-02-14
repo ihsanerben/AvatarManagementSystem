@@ -68,7 +68,7 @@ public class FileController {
         }
         String username = AuthUtil.getCurrentUsername();
         loggerService.info(txnId, "[username: " + username + "] [CONTROLLER] getAllFiles() çağrıldı.");
-        return ResponseEntity.ok(fileService.getAllFiles(txnId));
+        return ResponseEntity.ok(fileService.getAllFiles());
     }
 
     @DeleteMapping("/deleteFile")
@@ -124,8 +124,6 @@ public class FileController {
         FileProcessEntity processEntity = new FileProcessEntity();
         processEntity.setFile(fileEntity);
         processEntity.setProcess("File update işlemi başarılı. Kullanıcının yeni file bilgileri..");
-
-
 
         return ResponseEntity.ok(processEntity);
     }
