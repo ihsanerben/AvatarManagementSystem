@@ -1,0 +1,573 @@
+2025-02-14T09:21:06.294+03:00  INFO 3168 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 3168 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:21:06.296+03:00 DEBUG 3168 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:21:06.300+03:00  INFO 3168 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:21:06.484+03:00  INFO 3168 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:21:06.484+03:00  INFO 3168 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:21:06.543+03:00  INFO 3168 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:21:06.616+03:00  INFO 3168 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:21:06.617+03:00  INFO 3168 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:21:06.625+03:00  INFO 3168 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:21:06.825+03:00  INFO 3168 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:21:06.831+03:00  INFO 3168 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:21:06.831+03:00  INFO 3168 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:21:06.849+03:00  INFO 3168 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:21:06.850+03:00  INFO 3168 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
+2025-02-14T09:21:06.978+03:00  INFO 3168 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:21:07.000+03:00  INFO 3168 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:21:07.011+03:00  INFO 3168 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:21:07.110+03:00  INFO 3168 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:21:07.123+03:00  INFO 3168 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:21:07.214+03:00  INFO 3168 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6585df70
+2025-02-14T09:21:07.214+03:00  INFO 3168 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:21:07.249+03:00  INFO 3168 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:21:07.559+03:00  INFO 3168 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:21:07.648+03:00  INFO 3168 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:21:07.801+03:00  WARN 3168 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:21:07.814+03:00  INFO 3168 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:21:08.030+03:00  INFO 3168 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:21:08.034+03:00  INFO 3168 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 1.925 seconds (process running for 2.233)
+2025-02-14T09:21:54.548+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:21:54.549+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:21:54.556+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-02-14T09:22:33.695+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CONTROLLER] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.696+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] Dosya DB ve redise eklenecek - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.696+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.703+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.891+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [DB] Dosya DB'ye kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.900+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:22:33.900+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CACHE] Dosya Redis'e kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.900+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:22:33.900+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CONTROLLER] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:23:28.275+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [SERVICE] getFileByUsername() başladı - username: ihsan1
+2025-02-14T09:23:28.277+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [SERVICE] getAllFiles() çağrıldı.
+2025-02-14T09:23:28.325+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [DB] getFileByUsername() DB'de dosya bulundu. - username: ihsan1
+2025-02-14T09:23:28.326+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [SERVICE] getFileByUsername() tamamlandı - username: ihsan1
+2025-02-14T09:23:28.326+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 78
+2025-02-14T09:23:28.326+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 78
+2025-02-14T09:23:28.360+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:23:28.382+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:23:28.382+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 78
+2025-02-14T09:24:52.541+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CONTROLLER] updateFile() başladı - username: ihsan1
+2025-02-14T09:24:52.543+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] Dosya DB ve rediste güncellenecek - fileName: kaganabi.jpg
+2025-02-14T09:24:52.543+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] updateFile() başladı - username: ihsan1
+2025-02-14T09:24:52.543+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] getFileByUsername() başladı - username: ihsan1
+2025-02-14T09:24:52.543+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] getAllFiles() çağrıldı.
+2025-02-14T09:24:52.587+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [DB] getFileByUsername() DB'de dosya bulundu. - username: ihsan1
+2025-02-14T09:24:52.587+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] getFileByUsername() tamamlandı - username: ihsan1
+2025-02-14T09:24:52.588+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: kaganabi.jpg
+2025-02-14T09:24:52.653+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [DB] uploadFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:24:52.654+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] updateFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:24:52.654+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CACHE] file cache'de update edildi - fileName: kaganabi.jpg
+2025-02-14T09:24:52.659+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:24:52.659+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CACHE] Dosya Redis'te güncellendi - fileName: kaganabi.jpg
+2025-02-14T09:24:52.660+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CONTROLLER] updateFile() tamamlandı - username: ihsan1
+2025-02-14T09:25:28.343+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [SERVICE] getFileByUsername() başladı - username: ihsan1
+2025-02-14T09:25:28.344+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [SERVICE] getAllFiles() çağrıldı.
+2025-02-14T09:25:28.370+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [DB] getFileByUsername() DB'de dosya bulundu. - username: ihsan1
+2025-02-14T09:25:28.371+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [SERVICE] getFileByUsername() tamamlandı - username: ihsan1
+2025-02-14T09:25:28.372+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [CONTROLLER] deleteFile() başladı - fileId: 78
+2025-02-14T09:25:28.372+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [SERVICE] deleteFile() başladı - fileId: 78
+2025-02-14T09:25:28.395+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [SERVICE] deleteFile() tamamlandı - fileId: 78
+2025-02-14T09:25:28.400+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] username: ihsan1] [CACHE][delete] Redis dosya işlemleri başladı.
+2025-02-14T09:25:28.400+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] ihsan1] [CACHE] Dosya Redis'ten silindi: fileID: 78
+2025-02-14T09:25:28.400+03:00  INFO 3168 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: DEL00] [username: ihsan1] [CONTROLLER] deleteFile() tamamlandı - fileId: 78
+2025-02-14T09:25:31.782+03:00  INFO 3168 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:25:31.786+03:00  INFO 3168 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:25:31.801+03:00  INFO 3168 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:25:31.803+03:00  INFO 3168 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:25:31.807+03:00  INFO 3168 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:25:33.575+03:00  INFO 3286 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 3286 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:25:33.576+03:00 DEBUG 3286 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:25:33.576+03:00  INFO 3286 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:25:33.766+03:00  INFO 3286 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:25:33.766+03:00  INFO 3286 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:25:33.818+03:00  INFO 3286 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:25:33.886+03:00  INFO 3286 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:25:33.887+03:00  INFO 3286 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:25:33.893+03:00  INFO 3286 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:25:34.079+03:00  INFO 3286 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:25:34.084+03:00  INFO 3286 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:25:34.084+03:00  INFO 3286 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:25:34.099+03:00  INFO 3286 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:25:34.099+03:00  INFO 3286 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 504 ms
+2025-02-14T09:25:34.232+03:00  INFO 3286 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:25:34.253+03:00  INFO 3286 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:25:34.265+03:00  INFO 3286 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:25:34.353+03:00  INFO 3286 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:25:34.363+03:00  INFO 3286 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:25:34.445+03:00  INFO 3286 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33f2eb04
+2025-02-14T09:25:34.445+03:00  INFO 3286 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:25:34.471+03:00  INFO 3286 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:25:34.801+03:00  INFO 3286 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:25:34.875+03:00  INFO 3286 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:25:35.021+03:00  WARN 3286 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:25:35.035+03:00  INFO 3286 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:25:35.240+03:00  INFO 3286 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:25:35.244+03:00  INFO 3286 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 1.825 seconds (process running for 2.101)
+2025-02-14T09:25:55.902+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:25:55.903+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:25:55.907+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-02-14T09:25:56.035+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CONTROLLER] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.036+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] Dosya DB ve redise eklenecek - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.036+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.040+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.261+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [DB] Dosya DB'ye kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.449+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:25:56.449+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CACHE] Dosya Redis'e kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.450+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [SERVICE] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:25:56.450+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: gogo123456789] [username: ihsan1] [CONTROLLER] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:27:40.838+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 79
+2025-02-14T09:27:40.839+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 79
+2025-02-14T09:27:40.867+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:27:40.885+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:27:40.885+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: WERTWERT13123] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 79
+2025-02-14T09:28:27.134+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CONTROLLER] updateFile() başladı - username: ihsan1
+2025-02-14T09:28:27.136+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] Dosya DB ve rediste güncellenecek - fileName: kaganabi.jpg
+2025-02-14T09:28:27.136+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] updateFile() başladı - username: ihsan1
+2025-02-14T09:28:27.168+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: kaganabi.jpg
+2025-02-14T09:28:27.258+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [DB] uploadFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:28:27.258+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [SERVICE] updateFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:28:27.258+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CACHE] file cache'de update edildi - fileName: kaganabi.jpg
+2025-02-14T09:28:27.263+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:28:27.263+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CACHE] Dosya Redis'te güncellendi - fileName: kaganabi.jpg
+2025-02-14T09:28:27.263+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: PUT123123123123123123] [username: ihsan1] [CONTROLLER] updateFile() tamamlandı - username: ihsan1
+2025-02-14T09:33:05.071+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-9] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CONTROLLER] deleteFile() başladı - fileId: 79
+2025-02-14T09:33:05.072+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-9] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [SERVICE] deleteFile() başladı - fileId: 79
+2025-02-14T09:33:05.095+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-9] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [SERVICE] deleteFile() tamamlandı - fileId: 79
+2025-02-14T09:33:05.100+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-9] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CACHE][delete] Redis dosya işlemleri başladı.
+2025-02-14T09:33:05.100+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-9] com.ihsan.service.LoggerService          : [TxnId: 00000000000] ihsan1] [CACHE] Dosya Redis'ten silindi: fileID: 79
+2025-02-14T09:33:05.100+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-9] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CONTROLLER] deleteFile() tamamlandı - fileId: 79
+2025-02-14T09:34:10.266+03:00  INFO 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:34:10.284+03:00 ERROR 3286 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [ERROR][DB] getFileByUsername() -> Bu kullanıcının dosyası yok - username: ihsan1
+2025-02-14T09:35:09.620+03:00  INFO 3286 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:35:09.627+03:00  INFO 3286 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:35:09.654+03:00  INFO 3286 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:35:09.657+03:00  INFO 3286 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:35:09.659+03:00  INFO 3286 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:35:11.606+03:00  INFO 3537 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 3537 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:35:11.607+03:00 DEBUG 3537 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:35:11.607+03:00  INFO 3537 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:35:11.799+03:00  INFO 3537 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:35:11.799+03:00  INFO 3537 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:35:11.851+03:00  INFO 3537 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:35:11.922+03:00  INFO 3537 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:35:11.923+03:00  INFO 3537 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:35:11.929+03:00  INFO 3537 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:35:12.130+03:00  INFO 3537 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:35:12.135+03:00  INFO 3537 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:35:12.136+03:00  INFO 3537 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:35:12.151+03:00  INFO 3537 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:35:12.151+03:00  INFO 3537 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 525 ms
+2025-02-14T09:35:12.285+03:00  INFO 3537 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:35:12.307+03:00  INFO 3537 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:35:12.320+03:00  INFO 3537 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:35:12.413+03:00  INFO 3537 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:35:12.425+03:00  INFO 3537 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:35:12.519+03:00  INFO 3537 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55e5415d
+2025-02-14T09:35:12.519+03:00  INFO 3537 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:35:12.548+03:00  INFO 3537 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:35:12.845+03:00  INFO 3537 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:35:12.931+03:00  INFO 3537 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:35:13.084+03:00  WARN 3537 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:35:13.097+03:00  INFO 3537 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:35:13.310+03:00  INFO 3537 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:35:13.314+03:00  INFO 3537 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 1.871 seconds (process running for 2.14)
+2025-02-14T09:36:18.231+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:36:18.232+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:36:18.234+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-14T09:36:18.390+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:36:18.404+03:00 ERROR 3537 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [ERROR][DB] getFileByUsername() -> Bu kullanıcının dosyası yok - username: ihsan1
+2025-02-14T09:39:33.849+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:33.850+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] Dosya DB ve redise eklenecek - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:33.850+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:33.857+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:34.054+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [DB] Dosya DB'ye kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:34.266+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:39:34.266+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE] Dosya Redis'e kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:34.266+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:34.266+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:39:36.341+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:39:36.380+03:00  INFO 3537 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() tamamlandı
+2025-02-14T09:40:20.387+03:00  INFO 3537 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:40:20.394+03:00  INFO 3537 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:40:20.417+03:00  INFO 3537 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:40:20.419+03:00  INFO 3537 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:40:20.421+03:00  INFO 3537 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:40:22.298+03:00  INFO 3652 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 3652 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:40:22.302+03:00 DEBUG 3652 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:40:22.303+03:00  INFO 3652 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:40:22.506+03:00  INFO 3652 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:40:22.506+03:00  INFO 3652 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:40:22.559+03:00  INFO 3652 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:40:22.628+03:00  INFO 3652 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:40:22.628+03:00  INFO 3652 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:40:22.634+03:00  INFO 3652 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:40:22.819+03:00  INFO 3652 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:40:22.824+03:00  INFO 3652 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:40:22.824+03:00  INFO 3652 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:40:22.843+03:00  INFO 3652 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:40:22.843+03:00  INFO 3652 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 521 ms
+2025-02-14T09:40:22.983+03:00  INFO 3652 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:40:23.006+03:00  INFO 3652 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:40:23.024+03:00  INFO 3652 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:40:23.147+03:00  INFO 3652 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:40:23.158+03:00  INFO 3652 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:40:23.245+03:00  INFO 3652 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d75c604
+2025-02-14T09:40:23.246+03:00  INFO 3652 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:40:23.296+03:00  INFO 3652 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:40:23.638+03:00  INFO 3652 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:40:23.730+03:00  INFO 3652 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:40:23.885+03:00  WARN 3652 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:40:23.898+03:00  INFO 3652 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:40:24.124+03:00  INFO 3652 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:40:24.130+03:00  INFO 3652 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 1.982 seconds (process running for 2.283)
+2025-02-14T09:40:26.895+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:40:26.896+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:40:26.899+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-14T09:40:27.008+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-1] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:40:27.038+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-1] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:40:27.039+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-1] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() tamamlandı
+2025-02-14T09:40:29.497+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:40:29.515+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:40:29.516+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() tamamlandı
+2025-02-14T09:40:30.402+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:40:30.423+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:40:30.424+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() tamamlandı
+2025-02-14T09:40:36.976+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:40:36.980+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 80
+2025-02-14T09:40:36.983+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 80
+2025-02-14T09:40:37.220+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:40:37.242+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:40:37.243+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 80
+2025-02-14T09:40:38.092+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:40:38.092+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 80
+2025-02-14T09:40:38.092+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 80
+2025-02-14T09:40:38.096+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:40:38.098+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:40:38.098+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 80
+2025-02-14T09:40:39.054+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:40:39.054+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 80
+2025-02-14T09:40:39.054+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 80
+2025-02-14T09:40:39.058+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:40:39.060+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:40:39.061+03:00  INFO 3652 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 80
+2025-02-14T09:41:12.740+03:00  INFO 3652 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:41:12.745+03:00  INFO 3652 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:41:12.765+03:00  INFO 3652 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:41:12.767+03:00  INFO 3652 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:41:12.769+03:00  INFO 3652 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:41:32.161+03:00  INFO 3725 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 3725 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:41:32.162+03:00 DEBUG 3725 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:41:32.162+03:00  INFO 3725 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:41:32.408+03:00  INFO 3725 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:41:32.408+03:00  INFO 3725 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:41:32.465+03:00  INFO 3725 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:41:32.572+03:00  INFO 3725 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:41:32.572+03:00  INFO 3725 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:41:32.579+03:00  INFO 3725 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:41:32.806+03:00  INFO 3725 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:41:32.813+03:00  INFO 3725 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:41:32.814+03:00  INFO 3725 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:41:32.832+03:00  INFO 3725 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:41:32.832+03:00  INFO 3725 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 648 ms
+2025-02-14T09:41:32.973+03:00  INFO 3725 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:41:32.996+03:00  INFO 3725 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:41:33.008+03:00  INFO 3725 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:41:33.112+03:00  INFO 3725 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:41:33.123+03:00  INFO 3725 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:41:33.214+03:00  INFO 3725 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50b38342
+2025-02-14T09:41:33.215+03:00  INFO 3725 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:41:33.250+03:00  INFO 3725 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:41:33.565+03:00  INFO 3725 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:41:33.639+03:00  INFO 3725 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:41:33.789+03:00  WARN 3725 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:41:33.803+03:00  INFO 3725 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:41:34.083+03:00  INFO 3725 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:41:34.088+03:00  INFO 3725 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 2.149 seconds (process running for 2.54)
+2025-02-14T09:41:35.823+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:41:35.823+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:41:35.827+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-02-14T09:41:40.185+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.186+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] Dosya DB ve redise eklenecek - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.186+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.190+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.336+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [DB] Dosya DB'ye kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.342+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:41:40.342+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE] Dosya Redis'e kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.342+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:41:40.342+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:42:11.479+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:42:11.479+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 81
+2025-02-14T09:42:11.479+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 81
+2025-02-14T09:42:11.503+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:42:11.522+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:42:11.524+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 81
+2025-02-14T09:42:23.285+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:42:23.286+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 81
+2025-02-14T09:42:23.286+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 81
+2025-02-14T09:42:23.293+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:42:23.295+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: rahmicanabi.jpeg
+2025-02-14T09:42:23.295+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 81
+2025-02-14T09:42:42.550+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CONTROLLER] updateFile() başladı - username: ihsan1
+2025-02-14T09:42:42.551+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] Dosya DB ve rediste güncellenecek - fileName: kaganabi.jpg
+2025-02-14T09:42:42.551+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() başladı - username: ihsan1
+2025-02-14T09:42:42.568+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:42:42.569+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: kaganabi.jpg
+2025-02-14T09:42:42.598+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() thumbnailData güncellendi - fileName: kaganabi.jpg
+2025-02-14T09:42:42.636+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [DB] uploadFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:42:42.641+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:42:42.641+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE] file cache'de update edildi - fileName: kaganabi.jpg
+2025-02-14T09:42:42.641+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:42:42.641+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CONTROLLER] updateFile() tamamlandı - username: ihsan1
+2025-02-14T09:43:23.445+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:43:23.447+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 81
+2025-02-14T09:43:23.448+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 81
+2025-02-14T09:43:23.452+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:43:23.455+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: kaganabi.jpg
+2025-02-14T09:43:23.455+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 81
+2025-02-14T09:43:44.409+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: 
+2025-02-14T09:43:44.411+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 81
+2025-02-14T09:43:44.411+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 81
+2025-02-14T09:43:44.418+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:43:44.420+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: kaganabi.jpg
+2025-02-14T09:43:44.420+03:00  INFO 3725 --- [avatar] [http-nio-8080-exec-8] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 81
+2025-02-14T09:44:44.758+03:00  INFO 3725 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:44:44.764+03:00  INFO 3725 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:44:44.787+03:00  INFO 3725 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:44:44.789+03:00  INFO 3725 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:44:44.791+03:00  INFO 3725 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:44:46.825+03:00  INFO 3927 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 3927 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:44:46.826+03:00 DEBUG 3927 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:44:46.826+03:00  INFO 3927 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:44:47.028+03:00  INFO 3927 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:44:47.028+03:00  INFO 3927 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:44:47.077+03:00  INFO 3927 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:44:47.148+03:00  INFO 3927 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:44:47.149+03:00  INFO 3927 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:44:47.157+03:00  INFO 3927 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:44:47.351+03:00  INFO 3927 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:44:47.356+03:00  INFO 3927 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:44:47.356+03:00  INFO 3927 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:44:47.372+03:00  INFO 3927 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:44:47.372+03:00  INFO 3927 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 525 ms
+2025-02-14T09:44:47.503+03:00  INFO 3927 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:44:47.524+03:00  INFO 3927 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:44:47.535+03:00  INFO 3927 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:44:47.621+03:00  INFO 3927 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:44:47.632+03:00  INFO 3927 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:44:47.712+03:00  INFO 3927 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50b38342
+2025-02-14T09:44:47.712+03:00  INFO 3927 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:44:47.743+03:00  INFO 3927 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:44:48.054+03:00  INFO 3927 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:44:48.138+03:00  INFO 3927 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:44:48.293+03:00  WARN 3927 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:44:48.307+03:00  INFO 3927 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:44:48.529+03:00  INFO 3927 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:44:48.533+03:00  INFO 3927 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 1.87 seconds (process running for 2.188)
+2025-02-14T09:44:53.572+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:44:53.573+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:44:53.579+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-02-14T09:44:53.762+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 81
+2025-02-14T09:44:53.763+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 81
+2025-02-14T09:44:53.957+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:44:53.979+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: kaganabi.jpg
+2025-02-14T09:44:53.979+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 81
+2025-02-14T09:45:08.703+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 81
+2025-02-14T09:45:08.704+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 81
+2025-02-14T09:45:08.713+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:45:08.716+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: kaganabi.jpg
+2025-02-14T09:45:08.716+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 81
+2025-02-14T09:45:44.238+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CONTROLLER] updateFile() başladı - username: ihsan1
+2025-02-14T09:45:44.238+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] Dosya DB ve rediste güncellenecek - fileName: kaganabi.jpg
+2025-02-14T09:45:44.238+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() başladı - username: ihsan1
+2025-02-14T09:45:44.258+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: kaganabi.jpg
+2025-02-14T09:45:44.417+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() thumbnailData güncellendi - fileName: kaganabi.jpg
+2025-02-14T09:45:44.427+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [DB] uploadFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:45:44.439+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:45:44.440+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE] file cache'de update edildi - fileName: kaganabi.jpg
+2025-02-14T09:45:44.440+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:45:44.440+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CONTROLLER] updateFile() tamamlandı - username: ihsan1
+2025-02-14T09:45:55.272+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CONTROLLER] deleteFile() başladı - fileId: 81
+2025-02-14T09:45:55.273+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [SERVICE] deleteFile() başladı - fileId: 81
+2025-02-14T09:45:55.300+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] ihsan1] [DB] Dosya DB'ten silindi: fileID: 81
+2025-02-14T09:45:55.303+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CACHE][delete] Redis dosya işlemleri başladı.
+2025-02-14T09:45:55.303+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] ihsan1] [CACHE] Dosya Redis'ten silindi: fileID: 81
+2025-02-14T09:45:55.303+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [SERVICE] deleteFile() tamamlandı - fileId: 81
+2025-02-14T09:45:55.303+03:00  INFO 3927 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CONTROLLER] deleteFile() tamamlandı - fileId: 81
+2025-02-14T09:46:41.627+03:00  INFO 3927 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:46:41.632+03:00  INFO 3927 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:46:41.654+03:00  INFO 3927 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:46:41.657+03:00  INFO 3927 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:46:41.658+03:00  INFO 3927 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:46:43.457+03:00  INFO 4131 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 4131 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:46:43.458+03:00 DEBUG 4131 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:46:43.459+03:00  INFO 4131 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:46:43.724+03:00  INFO 4131 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:46:43.725+03:00  INFO 4131 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:46:43.779+03:00  INFO 4131 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:46:43.851+03:00  INFO 4131 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:46:43.851+03:00  INFO 4131 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:46:43.858+03:00  INFO 4131 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:46:44.047+03:00  INFO 4131 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:46:44.053+03:00  INFO 4131 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:46:44.053+03:00  INFO 4131 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:46:44.071+03:00  INFO 4131 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:46:44.071+03:00  INFO 4131 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 587 ms
+2025-02-14T09:46:44.208+03:00  INFO 4131 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:46:44.229+03:00  INFO 4131 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:46:44.241+03:00  INFO 4131 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:46:44.333+03:00  INFO 4131 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:46:44.343+03:00  INFO 4131 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:46:44.433+03:00  INFO 4131 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30665461
+2025-02-14T09:46:44.433+03:00  INFO 4131 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:46:44.460+03:00  INFO 4131 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:46:44.756+03:00  INFO 4131 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:46:44.839+03:00  INFO 4131 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:46:44.992+03:00  WARN 4131 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:46:45.006+03:00  INFO 4131 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:46:45.239+03:00  INFO 4131 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:46:45.243+03:00  INFO 4131 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 1.975 seconds (process running for 2.23)
+2025-02-14T09:46:51.387+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:46:51.388+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:46:51.391+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-14T09:46:51.508+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.508+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] Dosya DB ve redise eklenecek - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.509+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.513+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.712+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [DB] Dosya DB'ye kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.887+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:46:51.887+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE] Dosya Redis'e kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.887+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:51.887+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-2] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:46:54.564+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CONTROLLER] updateFile() başladı - username: ihsan1
+2025-02-14T09:46:54.564+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] Dosya DB ve rediste güncellenecek - fileName: kaganabi.jpg
+2025-02-14T09:46:54.565+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() başladı - username: ihsan1
+2025-02-14T09:46:54.596+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: kaganabi.jpg
+2025-02-14T09:46:54.622+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() thumbnailData güncellendi - fileName: kaganabi.jpg
+2025-02-14T09:46:54.636+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [DB] uploadFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:46:54.639+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:46:54.639+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CACHE] file cache'de update edildi - fileName: kaganabi.jpg
+2025-02-14T09:46:54.639+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [SERVICE] updateFile() tamamlandı - fileName: kaganabi.jpg
+2025-02-14T09:46:54.639+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 999999999999999999] [username: ihsan1] [CONTROLLER] updateFile() tamamlandı - username: ihsan1
+2025-02-14T09:46:57.129+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() başladı - fileId: 82
+2025-02-14T09:46:57.130+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [SERVICE] getFile() Dosya önce rediste aranacak, yoksa DB'de aranacak. fileId: 82
+2025-02-14T09:46:57.169+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE][get] Redis dosya işlemleri başladı.
+2025-02-14T09:46:57.189+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CACHE] Dosya Redis’ten alındı: kaganabi.jpg
+2025-02-14T09:46:57.189+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-4] com.ihsan.service.LoggerService          : [TxnId: 1111111] [username: ihsan1] [CONTROLLER] getFile() tamamlandı - fileId: 82
+2025-02-14T09:47:00.873+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CONTROLLER] deleteFile() başladı - fileId: 82
+2025-02-14T09:47:00.873+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [SERVICE] deleteFile() başladı - fileId: 82
+2025-02-14T09:47:00.895+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [DB] Dosya DB'ten silindi: fileID: 82
+2025-02-14T09:47:00.898+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CACHE][delete] Redis dosya işlemleri başladı.
+2025-02-14T09:47:00.899+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CACHE] Dosya Redis'ten silindi: fileID: 82
+2025-02-14T09:47:00.899+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [SERVICE] deleteFile() tamamlandı - fileId: 82
+2025-02-14T09:47:00.899+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-5] com.ihsan.service.LoggerService          : [TxnId: 00000000000] [username: ihsan1] [CONTROLLER] deleteFile() tamamlandı - fileId: 82
+2025-02-14T09:47:06.124+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:47:06.133+03:00 ERROR 4131 --- [avatar] [http-nio-8080-exec-6] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [ERROR][DB] getFileByUsername() -> Bu kullanıcının dosyası yok - username: ihsan1
+2025-02-14T09:47:08.180+03:00  INFO 4131 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [CONTROLLER] getFileByUsername() başladı
+2025-02-14T09:47:08.187+03:00 ERROR 4131 --- [avatar] [http-nio-8080-exec-7] com.ihsan.service.LoggerService          : [TxnId: 100000000] [username: ihsan1] [ERROR][DB] getFileByUsername() -> Bu kullanıcının dosyası yok - username: ihsan1
+2025-02-14T09:47:11.087+03:00  INFO 4131 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T09:47:11.090+03:00  INFO 4131 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T09:47:11.104+03:00  INFO 4131 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:47:11.106+03:00  INFO 4131 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T09:47:11.108+03:00  INFO 4131 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-14T09:58:01.372+03:00  INFO 4268 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Starting AvatarApplication using Java 21.0.5 with PID 4268 (/Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal/target/classes started by ihsanerenerben in /Users/ihsanerenerben/Desktop/spring-boot-projects/avatarfinal)
+2025-02-14T09:58:01.373+03:00 DEBUG 4268 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-02-14T09:58:01.373+03:00  INFO 4268 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-02-14T09:58:01.582+03:00  INFO 4268 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:58:01.583+03:00  INFO 4268 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-14T09:58:01.635+03:00  INFO 4268 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2025-02-14T09:58:01.704+03:00  INFO 4268 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-14T09:58:01.704+03:00  INFO 4268 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-02-14T09:58:01.712+03:00  INFO 4268 --- [avatar] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-02-14T09:58:01.901+03:00  INFO 4268 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-14T09:58:01.906+03:00  INFO 4268 --- [avatar] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-14T09:58:01.906+03:00  INFO 4268 --- [avatar] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-14T09:58:01.925+03:00  INFO 4268 --- [avatar] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-14T09:58:01.925+03:00  INFO 4268 --- [avatar] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 529 ms
+2025-02-14T09:58:02.065+03:00  INFO 4268 --- [avatar] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-14T09:58:02.085+03:00  INFO 4268 --- [avatar] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-14T09:58:02.097+03:00  INFO 4268 --- [avatar] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-14T09:58:02.193+03:00  INFO 4268 --- [avatar] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-14T09:58:02.205+03:00  INFO 4268 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-14T09:58:02.276+03:00  INFO 4268 --- [avatar] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@408d945b
+2025-02-14T09:58:02.276+03:00  INFO 4268 --- [avatar] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-14T09:58:02.308+03:00  INFO 4268 --- [avatar] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-14T09:58:02.706+03:00  INFO 4268 --- [avatar] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-14T09:58:02.792+03:00  INFO 4268 --- [avatar] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T09:58:02.978+03:00  WARN 4268 --- [avatar] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-14T09:58:02.995+03:00  INFO 4268 --- [avatar] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-02-14T09:58:03.242+03:00  INFO 4268 --- [avatar] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-14T09:58:03.246+03:00  INFO 4268 --- [avatar] [main] com.ihsan.starter.AvatarApplication      : Started AvatarApplication in 2.02 seconds (process running for 2.348)
+2025-02-14T09:58:25.300+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-14T09:58:25.301+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-14T09:58:25.304+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-14T09:58:31.824+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.824+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] Dosya DB ve redise eklenecek - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.824+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() başladı - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.829+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() - Dosya geçerli DB ve Redis işlemleri başlıyor - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.980+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [DB] Dosya DB'ye kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.986+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE][put] Redis dosya işlemleri başladı.
+2025-02-14T09:58:31.986+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CACHE] Dosya Redis'e kaydedildi - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.986+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [SERVICE] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T09:58:31.986+03:00  INFO 4268 --- [avatar] [http-nio-8080-exec-3] com.ihsan.service.LoggerService          : [TxnId: 1] [username: ihsan1] [CONTROLLER] uploadFile() tamamlandı - fileName: rahmicanabi.jpeg
+2025-02-14T10:01:11.910+03:00  INFO 4268 --- [avatar] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-14T10:01:11.916+03:00  INFO 4268 --- [avatar] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-14T10:01:11.933+03:00  INFO 4268 --- [avatar] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-14T10:01:11.935+03:00  INFO 4268 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-14T10:01:11.937+03:00  INFO 4268 --- [avatar] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
