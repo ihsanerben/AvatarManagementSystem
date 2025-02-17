@@ -1,4 +1,4 @@
-- - - Avatar Management System - - -
+Avatar Management System
 
           1. Proje Tanımı ve Amacı
 
