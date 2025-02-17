@@ -1,6 +1,6 @@
-Avatar Management System
+- - - Avatar Management System - - -
 
-      1. Proje Tanımı ve Amacı
+                  1. Proje Tanımı ve Amacı
 
 Avatar Management System, kullanıcıların avatarlarını yönetebileceği bir Spring Boot tabanlı web uygulamasıdır. Bu sistemde kullanıcılar:
 
@@ -10,7 +10,7 @@ Avatarlarını yükleyebilir, güncelleyebilir ve silebilir,
 Verilerini güvenli bir şekilde saklayabilir ve hızlı bir erişim sağlayabilir.
 Bu projede performans optimizasyonu ve güvenlik en üst düzeyde tutulmuş, özellikle Redis Cache mekanizması ile veritabanı erişim maliyetleri minimize edilmiştir.
 
-      2. Kullanılan Teknolojiler ve Araçlar
+                  2. Kullanılan Teknolojiler ve Araçlar
 
 Bu projede modern backend geliştirme prensipleri takip edilerek, performanslı ve ölçeklenebilir bir sistem oluşturulmuştur. Kullanılan başlıca teknolojiler ve araçlar şunlardır:
 
@@ -28,7 +28,7 @@ Docker: Redis’in container içinde çalıştırılması için kullanıldı.
 JUnit & Spring Boot Test: Birim testler ve sistem testleri için kullanıldı.
 Log4J & LoggerService: Kullanıcı işlemlerini detaylı bir şekilde loglamak için kullanıldı.
       
-      3. Uygulamanın Mimarisi ve Çalışma Prensibi
+                  3. Uygulamanın Mimarisi ve Çalışma Prensibi
 
     3.1 Kullanıcı İş Akışı
 Kullanıcı Kayıt Olur → Kullanıcı, username ve password bilgileri ile sisteme kayıt olur. Bu işlem hem PostgreSQL veritabanına hem de Redis Cache'e yazılır.
